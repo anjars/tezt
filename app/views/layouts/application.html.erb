@@ -12,15 +12,15 @@
 			<div class="container">
 				<a class="brand" href="/">Anjabok</a>
 				<ul class="nav">
-					<li> <%= link_to "All statuses", statuses_path %> </li>
+					<li> <%= link_to "Min feed", feed_path %> </li>
 				</ul>
 				<ul class="nav pull-right">
 					<% if user_signed_in? %>
 					<li><%= link_to current_user.full_name, edit_user_registration_path %></li>
-					<li><%= link_to "Logg ut", destroy_user_session_path, method: :delete %></li>
+					<li><%= link_to "Logg ut", logout_path %></li>
 					<% else %>
-					<li><%= link_to "Registrer deg", new_user_registration_path %></li>
-					<li><%= link_to "Logg inn", new_user_session_path %></li>
+					<li><%= link_to "Registrer deg", register_path %></li>
+					<li><%= link_to "Logg inn", login_path %></li>
 					<% end %>
 				</ul>
 			</div>
